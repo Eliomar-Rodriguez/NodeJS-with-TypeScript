@@ -10,7 +10,7 @@ router.get('/:id', (req, res) => {
   let ERROR_CODE = 404;
 
   const diary = diaryServices.findById(+req.params.id)
-  
+
   return (diary !== null)
     ? res.send(diary)
     : res.sendStatus(ERROR_CODE);
